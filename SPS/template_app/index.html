@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app='myApp' lang="en-US"> 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<!--jQuery, under MIT License: https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt-->
+	<script type='text/javascript' src='js/jquery-1.10.2.min.js'></script>
+	<!--Bootstrap, under Apache License 2.0: https://github.com/twitter/bootstrap/blob/master/LICENSE-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!--AngularJS, under MIT License: https://github.com/angular/angular.js/blob/master/LICENSE-->
+	<script type='text/javascript' src='js/angular.min.js'></script>
+	<!--underscore.js, under MIT License: https://github.com/jashkenas/underscore/blob/master/LICENSE-->
+	<script type='text/javascript' src='js/underscore.js'></script>
+
+	<!--user-defined-->
+	<link rel="stylesheet" type="text/css" href="css/external.css">
+	<script type='text/javascript' src='js/main.js'></script>
+
+	<title>SPS@Berkeley</title>
+</head>
+<body class=''>
+	<div ng-controller='mainctrl'>
+		<div class='heading' style='text-align:center'>
+			&nbsp;
+			<h1>Society of Physics Students Berkeley</h1>
+		</div>
+		<div class='navbardiv'>
+			<div class='navbar'>
+				<button class='btn btn-inverse' style='border-radius:0px' ng-repeat='item in items' ng-click='goto(item)' type='button' ng-bind='item'></button>
+			</div>
+		</div>
+	</div>
+	<div ng-view></div>
+	<br>
+	<div ng-controller='mainctrl'>
+		<div class='footing' style='text-align:center'>
+		  Visit us in 275 Leconte Hall, Berkeley, CA 94720 | Powered by <a href='http://www.angularjs.org' target="_blank">AngularJS</a>
+		</div>
+	</div>
+
+
+<!-- html code from UCLA SPS for subscribing to a google group
+	<div id="wrapper">
+
+				  <tr><td>
+				  <img src="http://groups.google.com/intl/en/images/logos/groups_logo_sm.gif"
+				         height=30 width=140 alt="Google Groups">
+				  </td></tr>
+				  <tr><td style="padding-left: 5px">
+				  <b>Subscribe to UCLA Society of Physics Students</b>
+				  </td></tr>
+				  <form action="http://groups.google.com/group/uclasps/boxsubscribe">
+				  <tr><td style="padding-left: 5px;">
+				  Email: <input type=text name=email>
+				  <input type=submit name="sub" value="Subscribe">
+				  </td></tr>
+
+	</div>
+-->
+
+
+
+</body>
+</html>

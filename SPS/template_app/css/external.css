@@ -1,0 +1,49 @@
+html {
+	font-family:'Helvetica Neue Light';
+	margin:0px;
+	background-color: #ffffff;
+	/*background-image:url('../img/testimg2.jpg');*/
+    position: relative;
+}
+
+html,body,.box {
+	width:100%;
+	height:100%;
+	min-height:400px;
+	color: #000000
+}
+
+body {
+	min-width: 500px;
+	padding:5px;
+}
+
+.navbar {
+	padding-top:1px;
+	width:100%;
+	height:30px;
+	white-space: nowrap;
+}
+
+.navbar .btn {
+	width:12.5%;
+	margin:0px;
+	white-space: nowrap;
+}
+
+.heading {
+    margin-right:0px;
+    padding-bottom:10px;
+}
+
+.footing {
+	background-color: #2f3337;
+	color: #ffffff;
+	position: absolute; 
+	text-align: center;
+	font-size: small
+}
+
+.upcomingevents, .pastevents {
+	word-wrap: break-word;
+}

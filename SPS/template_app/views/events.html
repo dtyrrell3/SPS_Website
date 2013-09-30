@@ -1,0 +1,37 @@
+<div>
+	<h3>Upcoming Events</h3>
+	<p>Events coming soon</p>
+	<table class='table upcomingevents'>
+		<thead>
+			<th ng-repeat='header in eventheaders' ng-bind='header'></th>
+		</thead>
+		<tbody>
+			<tr ng-repeat='event in events | filter:upcoming | orderBy:"datetime"'>
+				<td style='width:15%' ng-bind='event.name'></td>
+				<td style='width:10%' ng-bind='event.type'></td>
+				<td style='width:25%' ng-bind='event.datetime | date:"EEEE, MMMM d"'></td>
+				<td style='width:10%' ng-bind='event.datetime | date:"shortTime"'></td>
+				<td style='width:10%' ng-bind='event.location'></td>
+				<td style='width:30%' ng-bind='event.description'></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>Past Events</h3>
+	<button class='btn btn-success' ng-show='showpastevents!=true' ng-click='show()'>Show</button>
+	<button class='btn' ng-show='showpastevents!=false' ng-click='hide()'>Hide</button>
+	<table ng-show='showpastevents!=false' class='table pastevents'>
+		<thead>
+			<th ng-repeat='header in pasteventheaders' ng-bind='header'></th>
+		</thead>
+		<tbody>
+			<tr ng-repeat='event in events | filter:past | orderBy:"datetime":true'>
+				<td style='width:15%' ng-bind='event.name'></td>
+				<td style='width:10%' ng-bind='event.type'></td>
+				<td style='width:25%' ng-bind='event.datetime | date:"EEEE, MMMM d"'></td>
+				<td style='width:10%' ng-bind='event.datetime | date:"shortTime"'></td>
+				<td style='width:10%' ng-bind='event.location'></td>
+				<td style='width:30%' ng-bind='event.description'></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

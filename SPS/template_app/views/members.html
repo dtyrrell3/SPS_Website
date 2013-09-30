@@ -1,0 +1,21 @@
+<div>
+	<p>Any comments or update requests, please send to <a style='color:inherit' href='mailto:ucbsps@gmail.com'>ucbsps@gmail.com</a>.<p>
+	<h3>Current Leadership</h3>
+	<div ng-repeat='officer in officers'>
+		<div>
+			<a href='{{officer.img}}'><img style='float:left; padding-right:10px' width='70px' src='{{officer.img}}'></img></a>
+		</div>
+		<div style='margin-left:80px'>
+			<h4><span ng-bind='officer.position'></span>: <span ng-bind='officer.name'></span></h4>
+			<p ng-bind='officer.description'></p>
+			<p ng-bind='officer.bio'></p>
+		</div>
+		<br>
+	</div>
+	<h3>Currently Active Members:</h3>
+	<ul>
+		<li ng-repeat='entry in roster'>
+			<span ng-bind='entry'></span>
+		</li>
+	</ul>
+</div>
